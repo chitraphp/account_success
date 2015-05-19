@@ -1,0 +1,5 @@
+name = Account Success
+description = Display success message on creation of new user account
+package = Epicodus Examples
+core = 7.x
+files[] = account_success.module

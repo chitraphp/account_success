@@ -1,0 +1,21 @@
+<?php
+
+    function account_success_menu() {
+        $items = array();
+        $items['success'] = array(
+            'title' => 'You did it!',
+            'page callback' => 'account_created',
+            'access callback' => TRUE,
+            'type' => MENU_CALLBACK,
+        );
+
+        return $items;
+    }
+
+    function account_created() {
+        return '<h1>New user has been created! Bang a gong!</h1>';
+    }
+
+    function account_success_user_insert(&$edit, $account, $category) {
+        $_GET['destination'] = "success";
+    }
